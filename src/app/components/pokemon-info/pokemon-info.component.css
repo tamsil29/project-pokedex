@@ -1,0 +1,45 @@
+.top-design{
+    display: block;
+    box-sizing: border-box;
+    height: 500px;
+    clip-path: ellipse(75% 100% at 65.25% 0%);
+}
+
+.container{
+    padding-top: 50px;
+    padding-left: 13%;
+}
+
+.poketype{
+    color: rgb(210, 210, 210);
+}
+
+.headname{
+    color: white;
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.first3details{
+    width: 200px;
+    background-color: transparent;
+    margin-top: 15px;
+}
+
+.statsbox{
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.sprites{
+    text-align: center;
+}
+
+.paginator{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

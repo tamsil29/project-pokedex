@@ -1,0 +1,74 @@
+<ng-container *ngIf="pokemon">
+    <div class="top-design bg-{{ getType(pokemon[id]) }}">
+        <div class="container">
+        <h1 class="headname">{{ pokemon[id]?.name | titlecase}}</h1>
+        <span class="poketype">Pokemon type: </span>
+        <span *ngFor="let type of pokemon[id]?.types" 
+        class="badge border rounded-pill me-1">{{type.type.name}}</span>
+        <ul class="list-group first3details">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto">
+                  <div class="fw-bold">Experience</div>
+                </div>
+                <span class="badge bg-{{ getType(pokemon[id]) }}">{{ pokemon[id]?.base_experience }}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto">
+                  <div class="fw-bold">Height</div>
+                </div>
+                <span class="badge bg-{{ getType(pokemon[id]) }}">{{ pokemon[id]?.height }}</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto">
+                  <div class="fw-bold">Weight</div>
+                </div>
+                <span class="badge bg-{{ getType(pokemon[id]) }}">{{ pokemon[id]?.weight }}</span>
+              </li>
+        </ul>
+        </div>
+    </div>
+    <div class="card mb-3 statsbox">
+        <div class="card-body">
+            <h4 class="card-title">Stats</h4>
+            <div *ngFor="let stat of pokemon[id]?.stats" class=" row mt-3">
+                <div class="col-sm-2">
+                    <h6 class="text-sm-end mt-1">{{ stat.stat.name | titlecase }}</h6>
+                </div>
+                <div class="col-sm-10">
+                    <div class="progress" style="height: 30px">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-{{getType(pokemon[id])}}"
+                            role="progressbar" style="height: 30px;" [style.width]="stat.base_stat + '%'"
+                            aria-valuemin="0" aria-valuemax="100">
+                            <b>{{stat.base_stat}}%</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card statsbox">
+      <div class="card-header fw-bold">
+        Sprites 
+      </div>
+      <div>
+        <div class="sprites"><img src="{{ pokemon[id]?.sprites.front_default }}" />
+          <img src="{{ pokemon[id]?.sprites.back_default }}" />
+          <img src="{{ pokemon[id]?.sprites.front_shiny }}" />
+          <img src="{{ pokemon[id]?.sprites.back_shiny }}" /></div>
+      </div>
+  </div>
+    <div class="card statsbox">
+        <div class="card-header fw-bold">
+          Abilities
+        </div>
+        <ul *ngFor="let ability of pokemon[id]?.abilities" class="list-group list-group-flush">
+          <li class="list-group-item">{{ ability.ability.name }}</li>
+        </ul>
+    </div>
+    <div class="paginator my-2">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a routerLinkActive="active" class="nav-link" [routerLink]="['/pokemon-info', pokemon[id].name]">Details</a></li>
+        <li class="nav-item"><a routerLinkActive="active" class="nav-link" [routerLink]="['/pokemon-moves', pokemon[id].name]">Moves</a></li>
+      </ul>
+    </div>
+</ng-container>

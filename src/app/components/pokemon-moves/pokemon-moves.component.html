@@ -1,0 +1,18 @@
+<ng-container *ngIf="pokemon">
+    <div class="top-design bg-{{ getType(pokemon[id]) }}">
+</div>
+<div class="card statsbox">
+    <div class="card-header fw-bold">
+      {{ pokemon[id]?.name | titlecase}} Moves
+    </div>
+    <ul *ngFor="let move of pokemon[id]?.moves" class="list-group list-group-flush">
+      <li class="list-group-item">{{ move.move.name }}</li>
+    </ul>
+</div>
+<div class="paginator my-2">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a routerLinkActive="active" class="nav-link" [routerLink]="['/pokemon-info', pokemon[id].name]">Details</a></li>
+        <li class="nav-item"><a routerLinkActive="active" class="nav-link" [routerLink]="['/pokemon-moves', pokemon[id].name]">Moves</a></li>
+      </ul>
+</div>
+</ng-container>

@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.clickable{
+    cursor: pointer;
+}
+
+.bg-poison{
+    background-color: #6610f2;
+}
+.bg-bug{
+    background-color: rgb(0, 206, 0);
+}
+.bg-ground{
+    background-color: #fd7e14;
+}
+.bg-grass{
+    background-color: #198754;
+}
+.bg-fire{
+    background-color: #dc3545;
+}
+.bg-water{
+    background-color: #00b9de;
+}
+.bg-electric{
+    background-color: #ffc107;
+}
+.bg-normal{
+    background-color: #0d6efd;
+}
+.bg-fighting{
+    background-color: #6f42c1;
+}
+.bg-psychic{
+    background-color: #20c997;
+}
+.bg-rock{
+    background-color: #909090;
+}
+.bg-fairy{
+    background-color: #d63384;
+}
+.bg-dark{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.bg-steel{
+    background-color: #bababa;
+}
+.bg-dragon{
+    background-color: #ff0000;
+}
+.bg-ghost{
+    background-color: #9c0000;
+}
+.bg-ice{
+    background-color: #376fff;
+}

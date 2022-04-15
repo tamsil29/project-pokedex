@@ -1,0 +1,18 @@
+.bg-image{
+    background-image: url(https://wallpaperaccess.com/full/21009.jpg);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-contain{
+    padding-top: 700px;
+}
+.browse{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.btn{
+    color: white;
+    border-color: white;
+}

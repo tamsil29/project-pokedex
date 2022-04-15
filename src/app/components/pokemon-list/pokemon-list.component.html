@@ -1,0 +1,33 @@
+
+<div class="container my-4">
+<div class="row">
+    <div class="col-xl-10 offset-xl-1">
+        <div class="row">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Search for Pokemon..." [(ngModel)]="filterTerm" (keyup)="filter(filterTerm)">
+            </div><br>
+            <h1 class="mb-4">List of Pokemons</h1>
+            <div *ngFor="let pokemon of filteredPokemons | paginate: config" 
+                class="col-md-4">
+                <div class="card mb-3 bg-{{getType(pokemon)}}" [routerLink]="['/pokemon-info', pokemon.name]">
+                    <div class="card-body clickable">
+                        <div class="row">
+                            <div class="col-7 col-sm-8">
+                                <h3 class="card-title">{{pokemon.name | titlecase}}</h3>
+                                <span *ngFor="let type of pokemon.types"
+                                    class="badge border rounded-pill me-1 bg-dark">
+                                    {{type.type.name | titlecase}}
+                                </span>
+                            </div>
+                            <div class="col-5 col-sm-4">
+                                <img src="{{ pokemon.sprites.front_default }}"
+                                    class="img-fluid" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><br>
+<pagination-controls [responsive]="true" (pageChange)="pageChange($event);"></pagination-controls>

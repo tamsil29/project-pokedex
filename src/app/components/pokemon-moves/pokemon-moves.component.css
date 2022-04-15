@@ -1,0 +1,24 @@
+.top-design{
+    display: block;
+    box-sizing: border-box;
+    height: 500px;
+    clip-path: ellipse(75% 100% at 65.25% 0%);
+}
+
+.paginator{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background-color:transparent ;
+}
+
+.statsbox{
+    margin-top: -400px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
