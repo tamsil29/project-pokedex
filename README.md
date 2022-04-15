@@ -1,6 +1,7 @@
 # ProjectPokedex
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11. 
+This project is uploaded to firebase and is live at: https://pokedex-pokimon.web.app/
 
 ## Development server
 
