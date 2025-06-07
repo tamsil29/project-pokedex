@@ -32,7 +32,7 @@ export class PokemonListComponent implements OnInit, OnDestroy {
       .pipe(map((params) => params.get('page')))
       .subscribe(async (page) => {
         console.log({ page });
-        this.config.currentPage = page;
+        this.config.currentPage = page || 1;
         await this.getPokemons();
       });
   }
